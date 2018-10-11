@@ -2,6 +2,7 @@
     margin: 0;
 }
 html, body {
+    width: 100%;
     height: 100%;
     font-family: Arial;
 }
@@ -12,15 +13,24 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    will-change: transform;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
+.row {
+    margin: 0 2px;
+}
 
-.keys {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+@media (max-width: 768px ) {
+    .row {
+        margin: 30px 30px;
+    }
 }
 
 .key {
@@ -30,6 +40,11 @@ body {
 
 .key.playing {
     transform: scale(1.2);
+}
+
+.key a:active {
+    outline-color: goldenrod;
+    padding: 15px 20px;
 }
 
 .key a {
