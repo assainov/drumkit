@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    font-family: Arial;
+}
+body {
+    background-color: slateblue;
+    background-image: url("../img/background.jpeg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.keys {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.key {
+    display: inline-block;
+    margin: auto 5px;
+}
+
+.key.playing {
+    transform: scale(1.2);
+}
+
+.key a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    outline: solid sandybrown 3px;
+}
+
+.key.playing a {
+    outline-color: goldenrod;
+}
